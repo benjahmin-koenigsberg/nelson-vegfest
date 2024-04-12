@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+body{
+font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.josefin{
+    font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+}
+
+.hero-image {
+    background-image: url("./images/nelson.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
