@@ -14,10 +14,24 @@
         crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
     <title>VegFest Nelson</title>
 </head>
 
 <body>
+
+
+
+
+
+
+
     <header>
         <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom">
             <div class="container-fluid">
@@ -64,6 +78,25 @@
         </nav>
     </header>
 
+    <div class="modal fade" id="exampleModalCenter" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+
+                <div class="modal-body d-flex align-items-center justify-content-center modal-body-music">
+                    <!-- <video  controls width="400" height="260" autoplay>
+                    <source src="./introVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/V2MSy-jRCWg?si=inKmEt97uJ3qF6ej"
+                        allow="autoplay"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media;  gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <main>
         <img src="./images/VegFestNelson_WebBanner_01.jpeg" class="m-auto mt-4" style="width: 100vw;" />
         <h1 class="text-center mt-2 display-6">Sunday, August 18, 2024<br>300 Block of Baker St., Nelson, BC, Canada
@@ -93,8 +126,9 @@
             <li>🏆 Stacy Neilson
             </li>
         </ul>
-        <h3 class="mt-4 text-center"> Thank you everyone for supporting Veg Fest Nelson!</h3>
-
+        <h3 class="mt-4 text-center"> Thank you everyone for supporting Veg Fest Nelson!</h3><div class="border-top my-3 w-50 m-auto"></div>
+        <h4 class="text-center mt-2 font-italic">To view the Q&A with Dr. Gregor click <a
+                href="https://youtu.be/j-saGexcixU?si=T72pS_b4NPRPHSfq" target="_blank">here</a></h4>
     </section>
 
 
@@ -218,10 +252,6 @@
                     </div>
                 </div>
             </li>
-
-
-
-
         </ul>
 
     </section>
@@ -552,6 +582,22 @@
             <a target="_blank" href="https://benjahminkoenigsberg.com/" class="text-light">Benjahmin</a>
         </p>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $("#exampleModalCenter").modal('show');
+        });
+
+        $(function () {
+            $("body").on('hidden.bs.modal', function (e) {
+                var $iframes = $(e.target).find("iframe");
+                $iframes.each(function (index, iframe) {
+                    $(iframe).attr("src", $(iframe).attr("src"));
+                });
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>
